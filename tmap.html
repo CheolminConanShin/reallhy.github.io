@@ -22,7 +22,7 @@
 			};
 
 			function parseLocation(address1, address2, callback){
-				var urlStr = "http://apis.skplanetx.com/tmap/geo/fullAddrGeo?version=1&format=json&addressFlag=F00";				
+				var urlStr = "https://apis.skplanetx.com/tmap/geo/fullAddrGeo?version=1&format=json&addressFlag=F00";				
 			    urlStr += "&appKey=" + appKey;
 				urlStr += "&fullAddr=";
 				$.getJSON(urlStr + address1, function(result1){
