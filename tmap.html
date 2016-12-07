@@ -9,7 +9,7 @@
             var appKey = "2447e707-af39-327f-ac4c-78189ebfd9f9";
 			//초기화 함수
 			function initTmap(){
-			    centerLL = new Tmap.LonLat(14145677.4, 4511257.6);
+			    
 			    map = new Tmap.Map({div:'map_div',
 			                        width:'100%', 
 			                        height:'400px',
@@ -35,9 +35,10 @@
 					});
 				});
 			}
-
+			var routeLayer;
 			//경로 정보 로드
 			function searchRoute(startX, startY, endX, endY){
+				if(routeLayer) map.removeLayer(routeLayer);
 				try{
 				    var routeFormat = new Tmap.Format.KML({extractStyles:true, extractAttributes:true});			    
 				    var urlStr = "https://apis.skplanetx.com/tmap/routes?version=1&format=xml";
@@ -50,8 +51,8 @@
 				                                        url: urlStr,
 				                                        format:routeFormat
 				                                        });
-				    var routeLayer = new Tmap.Layer.Vector("route", {protocol:prtcl, strategies:[new Tmap.Strategy.Fixed()]});
-				    routeLayer.events.register("featuresadded", routeLayer, onDrawnFeatures);
+				    routeLayer = new Tmap.Layer.Vector("route", {protocol:prtcl, strategies:[new Tmap.Strategy.Fixed()]});
+				    routeLayer.events.register("featuresadded", routeLayer, onDrawnFeatures);				    
 				    map.addLayer(routeLayer);
 				} catch(error){
 					console.log(error);
