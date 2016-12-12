@@ -12,7 +12,7 @@ function initTmap(){
         parseLocation(document.getElementById("start").value, document.getElementById("end").value, searchRoute);
     });
 
-    $('#destinationDialog').modal('show');
+    $('#destinationDialog').modal();
 };
 
 function parseLocation(address1, address2, callback){
