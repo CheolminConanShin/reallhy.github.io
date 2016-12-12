@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/CheolminConanShin/reallhy.github.io/issues"
   },
-  "homepage": "https://github.com/CheolminConanShin/reallhy.github.io#readme"
+  "homepage": "https://github.com/CheolminConanShin/reallhy.github.io#readme",
+  "devDependencies": {
+    "jasmine": "^2.5.2"
+  }
 }
