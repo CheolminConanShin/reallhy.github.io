@@ -11,8 +11,7 @@ function initTmap(){
     document.getElementById("route").addEventListener("click", function(){
         parseLocation(document.getElementById("start").value, document.getElementById("end").value, searchRoute);
     });
-
-    $('#destinationDialog').modal();
+//    $('#destinationDialog').modal('show');
 };
 
 function parseLocation(address1, address2, callback){
@@ -55,3 +54,4 @@ function searchRoute(startX, startY, endX, endY){
 //경로 그리기 후 해당영역으로 줌
 function onDrawnFeatures(e){
     map.zoomToExtent(this.getDataExtent());
+}
