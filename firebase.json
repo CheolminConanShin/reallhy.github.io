@@ -3,11 +3,11 @@
     "rules": "database.rules.json"
   },
   "hosting": {
-    "public": "public",
+    "public": "src",
     "rewrites": [
       {
         "source": "**",
-        "destination": "/tmap.html"
+        "destination": "/html/tmap.html"
       }
     ]
   }
