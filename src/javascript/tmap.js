@@ -11,7 +11,7 @@ function initTmap(){
     document.getElementById("route").addEventListener("click", function(){
         parseLocation(document.getElementById("start").value, document.getElementById("end").value, searchRoute);
     });
-//    $('#destinationDialog').modal('show');
+   // $('#destinationDialog').modal('show');
 };
 
 function parseLocation(address1, address2, callback){
