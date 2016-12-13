@@ -1,10 +1,47 @@
 <!DOCTYPE html>
 <!-- saved from url=(0095)http://www.ollehmap.com/download/javascript_v3.0/samples/service/directionsrenderer-simple.html -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Way Knower</title>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+	<title>Way Knower</title>
+    <link rel="stylesheet" href="../lib/bootstrap.min.css">
+    <link rel="stylesheet" href="../lib/bootstrap-theme.min.css">
+    <script src="../lib/jquery-3.1.1.min.js"></script>
+    <script src="../lib/bootstrap.min.js"></script>
+    <style>
+	    html, body {
+	    	height: 100%;
+	    }
+	    body {
+			display: table;
+		    width: 100%;
+	    }
+	    .content {
+		    border: 1px dashed gray;
+		    width; 100%;
+		    display: table-cell;
+		    text-align: center;
+		    vertical-align: middle;
+	    }
+	    #route {
+		    display: inline-block;
+		    vertical-align: top;
+	    }
+    </style>
+    <script>
+    	$(document).ready(function() {
+    		const routeButton = document.getElementById("route");
+    		routeButton.addEventListener('click', e => {
+    			window.location.href = "./search.html";
+    		});
+    	});
+    	
+    </script>
 </head>
 <body>
-	
+	<div class="content">
+		<button type="button" class="btn btn-primary" id="route">길찾기</button>
+	</div>
 </body>
 </html>
