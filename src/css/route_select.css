@@ -1,8 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Droid+Sans');
+body{
+	font-size: 12px;
+}
 .myNavBar {
 	background-color: #607d8b;
 	border-color: #9b9b9b;
 	color: #ffffff;
+
 }
+
+.myNavBar div {
+	height: 9vh;
+}
+
 .menu-item {
 	color: white;
+}
+
+.navbar-brand {
+	padding: 0px;
+	display: table;
+}
+
+.navbar-brand span {
+	display: table-cell;
+ 	vertical-align: middle;
+}
+
+.glyphicon {
+	margin-top: 3vh;
+	font-size: 3vh;
+}
+
+.navbar-title {
+	margin-top: 2vh;
+	margin-left: 5vw;
+	font-size: 4vh;
+	font-family: 'Droid Sans', sans-serif;
 }
