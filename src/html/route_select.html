@@ -1,20 +1,52 @@
 <html>
 <head>
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="../lib/materialize/css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="../lib/materialize/css/materialize.min.css" media="screen,projection"/>
     <link rel="stylesheet" href="../css/route_select.css">
 
     <script src="../lib/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="../lib/materialize/js/materialize.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
 </head>
 <body>
-    <div class="navbar navbar-fixed-top myNavBar">
-        <div class="container">
-            <div class="navbar-header">
-                <div class="navbar-brand"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span><span class="navbar-title">WayKnower</span></div>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo left">WayKnower</a>
+        </div>
+    </nav>
+    <div class="row">
+        <div class="col s12 location-field valign-wrapper"">
+            <label class="col s2">출발</label>
+            <div class="inline col s10">
+                <input id="departure" type="email" class="validate">
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col s12 location-field valign-wrapper"">
+            <label class="col s2">도착</label>
+            <div class="inline col s10">
+                <input id="destination" type="email" class="validate">
+            </div>
+        </div>
+    </div>
+    <table class="route-field centered">
+        <tbody>
+            <tr>
+                <td class="button-field">
+                    <a class="btn">최적</a>
+                    <a class="waves-effect waves-light btn">최단</a>
+                    <a class="waves-effect waves-light btn">무료</a>
+                </td>
+            </tr>
+            <tr>
+                <td class="map-field">map</td>
+            </tr>
+            <tr>
+                <td class="go-this-way-button">이 길로 가주세요</td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>
