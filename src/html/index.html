@@ -34,7 +34,8 @@
     		const routeButton = document.getElementById("route");
     		routeButton.addEventListener('click', e => {
     			window.navigator.vibrate(200);
-    			top.location.href = "./search.html";
+    			window.location.replace("./search.html");
+    			return false;
     		});
     	});
     </script>
