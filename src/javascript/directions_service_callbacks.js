@@ -8,7 +8,7 @@ const shortest_path_service_callback = function(data) {
 		directions : directionsResult, // 길찾기 결과. DirectionsService 의 parseRoute 결과
 		map : map,						// 길찾기 결과를 렌더링할 지도
 		keepView : false,				// 현재 뷰 유지 여부. true 이면 현재 뷰를 변경하지 않음. 디폴트 false
-		offMarkers : false,				// 마커 표시 억제 여부. true 이면 마커를 표시하지 않음. 디폴트 false
+		offMarkers : true,				// 마커 표시 억제 여부. true 이면 마커를 표시하지 않음. 디폴트 false
 		markerOptions : {			// 마커 옵션
 			draggable : false,			// 마커 드래깅 가능 여부. true 이면 마커를 드래그 할 수 있음. 디폴트 false,
 			cation : 'test caption',	// 마커 캡션 설정.
@@ -31,7 +31,7 @@ const highway_path_service_callback = function(data) {
 		directions : directionsResult, // 길찾기 결과. DirectionsService 의 parseRoute 결과
 		map : map,						// 길찾기 결과를 렌더링할 지도
 		keepView : false,				// 현재 뷰 유지 여부. true 이면 현재 뷰를 변경하지 않음. 디폴트 false
-		offMarkers : false,				// 마커 표시 억제 여부. true 이면 마커를 표시하지 않음. 디폴트 false
+		offMarkers : true,				// 마커 표시 억제 여부. true 이면 마커를 표시하지 않음. 디폴트 false
 		markerOptions : {				// 마커 옵션
 			draggable : false,			// 마커 드래깅 가능 여부. true 이면 마커를 드래그 할 수 있음. 디폴트 false,
 			cation : 'test caption',	// 마커 캡션 설정.
@@ -54,7 +54,7 @@ const freeway_path_service_callback = function(data) {
 		directions : directionsResult, // 길찾기 결과. DirectionsService 의 parseRoute 결과
 		map : map,						// 길찾기 결과를 렌더링할 지도
 		keepView : false,				// 현재 뷰 유지 여부. true 이면 현재 뷰를 변경하지 않음. 디폴트 false
-		offMarkers : false,				// 마커 표시 억제 여부. true 이면 마커를 표시하지 않음. 디폴트 false
+		offMarkers : true,				// 마커 표시 억제 여부. true 이면 마커를 표시하지 않음. 디폴트 false
 		markerOptions : {				// 마커 옵션
 			draggable : false,			// 마커 드래깅 가능 여부. true 이면 마커를 드래그 할 수 있음. 디폴트 false,
 			cation : 'test caption',	// 마커 캡션 설정.
@@ -77,7 +77,7 @@ const traffic_path_service_callback = function(data) {
 		directions : directionsResult, // 길찾기 결과. DirectionsService 의 parseRoute 결과
 		map : map,						// 길찾기 결과를 렌더링할 지도
 		keepView : false,				// 현재 뷰 유지 여부. true 이면 현재 뷰를 변경하지 않음. 디폴트 false
-		offMarkers : false,				// 마커 표시 억제 여부. true 이면 마커를 표시하지 않음. 디폴트 false
+		offMarkers : true,				// 마커 표시 억제 여부. true 이면 마커를 표시하지 않음. 디폴트 false
 		markerOptions : {				// 마커 옵션
 			draggable : false,			// 마커 드래깅 가능 여부. true 이면 마커를 드래그 할 수 있음. 디폴트 false,
 			cation : 'test caption',	// 마커 캡션 설정.
