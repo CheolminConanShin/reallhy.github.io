@@ -1,52 +1,66 @@
 @import url('https://fonts.googleapis.com/css?family=Droid+Sans');
 
-.nav-wrapper {
+nav, .nav-wrapper {
+	height: 9vh;
 	background-color: #607d8b;
 }
 
 nav .brand-logo {
-    font-size: 1.6rem;
+    font-size: 4vh;
 }
 
-.location-field label{
-    font-size: 1.4rem;
+.location-field {
+	height: 11vh;
+}
+.location-field label {
+    font-size: 3vh;
+    color: #607d8a;
+}
+
+.location-field input {
+	height: 3vh;
 }
 
 .row {
-    margin-bottom: 0rem;
+    margin-bottom: 0vh;
+	margin-top: 2vh;
 }
 
 .inline input {
     margin-bottom: 0rem;
-    font-size: 1.4rem;
+    font-size: 3vh;
 }
 
 .route-field {
-    margin-top: 1.5rem;
+    margin-top: 3vh;
     background: #f2f2f2;
-    height: 75%;
+    height: 75vh;
+}
+
+.route-field td, th {
+	padding: 0vh;	
 }
 
 .button-field {
-    height: 10%;
+    height: 9vh;
 }
 
 .button-field a {
-    background: #fafafa;
-    color: #979797;
+    background: #607d8b;
+    color: white;
 }
 
 .button-field a:hover {
-    background: #fafafa;
-    color: #979797;
+    background: #607d8b;
+    color: white;
 }
 
-.map-field {
-    height: 55%;
+.map-field, #map_div {
+    height: 57vh;
 }
 
 .go-this-way-button {
     background: white;
     color: #607d8a;
-    height: 10%;
+    height: 8vh;
 }
