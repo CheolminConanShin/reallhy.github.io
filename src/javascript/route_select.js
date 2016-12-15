@@ -65,5 +65,17 @@ $(document).ready(function() {
 	// 	console.log("hell");
 	// 	document.body.requestFullscreen();
 	// });
+	fullScreen.addEventListener("click", e => {
+		$(document).ready(function() {
+    		var screen = document.querySelector('html');
+			if(screen.requestFullScreen) {
+			    screen.requestFullScreen();
+			} else if(screen.mozRequestFullScreen) {
+				screen.mozRequestFullScreen();
+			} else if(screen.webkitRequestFullScreen) {
+				screen.webkitRequestFullScreen();
+			}
+    	});
+	});
 	init();
 });

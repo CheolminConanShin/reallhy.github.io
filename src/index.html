@@ -29,24 +29,21 @@
     </style>
     <script>
     	$(document).ready(function() {
-    		this.parent.document.webkitIsFullScreen = true;
-    	});
-    	var fullScreen = function() {
-    		var test = document.querySelector('body');
-    		if(test.requestFullScreen) {
-			    test.requestFullScreen();
-			} else if(test.mozRequestFullScreen) {
-				test.mozRequestFullScreen();
-			} else if(test.webkitRequestFullScreen) {
-				test.webkitRequestFullScreen();
+    		var screen = document.querySelector('body');
+			if(screen.requestFullScreen) {
+			    screen.requestFullScreen();
+			} else if(screen.mozRequestFullScreen) {
+				screen.mozRequestFullScreen();
+			} else if(screen.webkitRequestFullScreen) {
+				screen.webkitRequestFullScreen();
 			}
-    	}
+    	});
+		
     </script>
 </head>
 <body>
 	<div class="content">
 		<a href="./html/route_select.html" class="btn" id="route">루트선택</a>
-		<button onclick="fullScreen()">Full screen</button>
 	</div>
 </body>
 </html>
