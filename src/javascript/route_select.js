@@ -61,9 +61,9 @@ function init() {
 }
 
 $(document).ready(function() {
-	goThisWayBtn.addEventListener("click", e => {
-		console.log("hell");
-		document.body.requestFullscreen();
-	});
+	// goThisWayBtn.addEventListener("click", e => {
+	// 	console.log("hell");
+	// 	document.body.requestFullscreen();
+	// });
 	init();
 });
