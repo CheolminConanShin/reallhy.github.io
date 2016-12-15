@@ -2,10 +2,8 @@
 <!-- saved from url=(0095)http://www.ollehmap.com/download/javascript_v3.0/samples/service/directionsrenderer-simple.html -->
 <html>
 <head>
-<!--
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-	-->
 	<meta name="mobile-web-app-capable" content="yes"/>
 	<title>Way Knower</title>
     <script src="lib/jquery-3.1.1.min.js"></script>
@@ -30,19 +28,25 @@
 	    }
     </style>
     <script>
-    	// $(document).ready(function() {
-    	// 	const routeButton = document.getElementById("route");
-    	// 	routeButton.addEventListener('click', e => {
-    	// 		window.navigator.vibrate(200);
-    	// 		window.location.replace("/html/search.html");
-    	// 		return false;
-    	// 	});
-    	// });
+    	$(document).ready(function() {
+    		this.parent.document.webkitIsFullScreen = true;
+    	});
+    	var fullScreen = function() {
+    		var test = document.querySelector('body');
+    		if(test.requestFullScreen) {
+			    test.requestFullScreen();
+			} else if(test.mozRequestFullScreen) {
+				test.mozRequestFullScreen();
+			} else if(test.webkitRequestFullScreen) {
+				test.webkitRequestFullScreen();
+			}
+    	}
     </script>
 </head>
 <body>
 	<div class="content">
 		<a href="./html/route_select.html" class="btn" id="route">루트선택</a>
+		<button onclick="fullScreen()">Full screen</button>
 	</div>
 </body>
 </html>
