@@ -29,21 +29,23 @@
     </style>
     <script>
     	$(document).ready(function() {
-    		var screen = document.querySelector('body');
-			if(screen.requestFullScreen) {
-			    screen.requestFullScreen();
-			} else if(screen.mozRequestFullScreen) {
-				screen.mozRequestFullScreen();
-			} else if(screen.webkitRequestFullScreen) {
-				screen.webkitRequestFullScreen();
-			}
+    		$("#route").on("click", function() {
+	   //  		var screen = document.querySelector('body');
+				// if(screen.requestFullScreen) {
+				//     screen.requestFullScreen();
+				// } else if(screen.mozRequestFullScreen) {
+				// 	screen.mozRequestFullScreen();
+				// } else if(screen.webkitRequestFullScreen) {
+				// 	screen.webkitRequestFullScreen();
+				// }
+				location.replace("./html/route_select.html");
+	    	});
     	});
-		
     </script>
 </head>
 <body>
 	<div class="content">
-		<a href="./html/route_select.html" class="btn" id="route">루트선택</a>
+		<a class="btn" id="route">루트선택</a>
 	</div>
 </body>
 </html>

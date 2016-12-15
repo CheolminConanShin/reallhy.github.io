@@ -61,13 +61,11 @@ function init() {
 }
 
 $(document).ready(function() {
-	// goThisWayBtn.addEventListener("click", e => {
-	// 	console.log("hell");
-	// 	document.body.requestFullscreen();
-	// });
-	fullScreen.addEventListener("click", e => {
-		$(document).ready(function() {
-    		var screen = document.querySelector('html');
+	init();
+	var flag = true;
+	$('html').on("click", function(){
+		if(flag) {
+			var screen = document.querySelector('html');
 			if(screen.requestFullScreen) {
 			    screen.requestFullScreen();
 			} else if(screen.mozRequestFullScreen) {
@@ -75,7 +73,7 @@ $(document).ready(function() {
 			} else if(screen.webkitRequestFullScreen) {
 				screen.webkitRequestFullScreen();
 			}
-    	});
-	});
-	init();
+		}
+		flag = false;
+	});	
 });
