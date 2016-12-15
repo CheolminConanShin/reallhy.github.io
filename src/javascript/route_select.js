@@ -9,7 +9,13 @@ function init() {
 
 		map = new olleh.maps.Map('map_div', {
 			center : new olleh.maps.LatLng(position.coords.latitude, position.coords.longitude),
-			zoom : 7
+			zoom : 7,
+			zoomControl: false,
+			copyrightControl: false,
+			mapTypeControl: false,
+			measureControl: false,
+			scaleControl: false,
+			panControl: false,
 		});
 
 		// sds : 37.516580, 127.100821
