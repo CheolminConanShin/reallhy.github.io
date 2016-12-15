@@ -2,7 +2,6 @@ var map, directionsService;
 var priorityType;
 // 초기화 함수
 function init() {
-	console.log("heelo");
 	let geolocation_callback = function(position) {
 		map = new olleh.maps.Map('map_div', {
 			center : new olleh.maps.LatLng(position.coords.latitude, position.coords.longitude),
@@ -62,6 +61,9 @@ function init() {
 }
 
 $(document).ready(function() {
-    window.scrollTo(0,1);
+	goThisWayBtn.addEventListener("click", e => {
+		console.log("hell");
+		document.body.requestFullscreen();
+	});
 	init();
 });
