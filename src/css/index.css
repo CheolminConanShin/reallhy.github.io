@@ -29,12 +29,17 @@
 .btn {
     width: 76vw;
     height: 7vh;
-    background-color: #b2dfdb;
+    background-color: #01afaf;
     border-radius: 30px;
     margin-top: 9vh;
     margin-left: 12vw;
     line-height: 7vh;
     box-shadow: 0 0 0 0;
+}
+
+.btn.disabled, .btn[disabled="disabled"]{
+    color: white !important;
+    background-color: #b2dfdb !important;
 }
 
 .btn:hover {
