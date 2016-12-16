@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Droid+Sans');
+
+nav, .nav-wrapper {
+	height: 9vh;
+	background-color: #607d8a;
+}
+
+nav .brand-logo {
+    font-size: 4vh;
+    margin-left: 3vh;
+}
+
+.location-field {
+	height: 25vh;
+}
+.location-field label {
+    font-size: 3vh;
+    color: #607d8a;
+}
+
+.location-field input {
+	height: 3vh;
+}
+
+.row {
+    margin-bottom: 0vh;
+	margin-top: 5vh;
+}
+
+.inline input {
+    margin-bottom: 0rem;
+    font-size: 3vh;
+}
+
+.route-field {
+    margin-top: 3vh;
+    background: white;
+    height: 10vh;
+}
+
+.route-field td, th {
+	padding: 0vh;	
+}
+
+.button-field {
+    height: 9vh;
+}
+
+.button-field a {
+    background: #fafafa;
+    color: #607d8a;
+    border-color: #979797;
+}
+
+.button-field a:hover {
+    background: black;
+    color: white;
+}
