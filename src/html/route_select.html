@@ -1,6 +1,6 @@
 <html>
 <head>
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="../lib/materialize/css/materialize.min.css" media="screen,projection"/>
     <link rel="stylesheet" href="../css/route_select.css">
 
@@ -15,9 +15,8 @@
     <script type="text/javascript" src="../javascript/directions_service_callbacks.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="mobile-web-app-capable" content="yes"/>
 </head>
-<body>
+<body onload="documentReady()">
     <nav>
         <div class="nav-wrapper valign-wrapper">
             <a href="#" class="brand-logo left">WayKnower</a>
@@ -25,12 +24,12 @@
     </nav>
     <div class="location-field">
     <div class="row">
-        <div class="col s12 valign-wrapper">
-            <label class="col s2">출발</label>
-            <div class="inline col s10">
-                <input id="departure" type="email" class="validate">
+            <div class="col s12 valign-wrapper">
+                <label class="col s2">출발</label>
+                <div class="inline col s10">
+                    <input id="departure" type="email" class="validate">
+                </div>
             </div>
-        </div>
     </div>
     <div class="row">
         <div class="col s12 valign-wrapper"">
@@ -45,9 +44,9 @@
         <tbody>
             <tr>
                 <td class="button-field">
-                    <a id="fullScreen" class="waves-effect waves-light btn">최적</a>
-                    <a class="waves-effect waves-light btn">최단</a>
-                    <a class="waves-effect waves-light btn">무료</a>
+                    <a id="recommendedRouteBtn" class="waves-effect waves-light btn" onclick="recommendedRoute()">최적</a>
+                    <a id="shortestRouteBtn" class="waves-effect waves-light btn" onclick="shortestRoute()">최단</a>
+                    <a id="freeRouteBtn"  class="waves-effect waves-light btn" onclick="freeRoute()">무료</a>
                 </td>
             </tr>
             <tr>
