@@ -1,58 +1,42 @@
 @import url('https://fonts.googleapis.com/css?family=Droid+Sans');
 
-nav, .nav-wrapper {
-	height: 9vh;
-	background-color: #607d8a;
+.app-title {
+    margin-top: 18vh;
+    margin-bottom: 10vh;
 }
 
-nav .brand-logo {
+.app-title label {
     font-size: 4vh;
-    margin-left: 3vh;
+    color: #01afaf;
 }
 
-.location-field {
-	height: 25vh;
-}
-.location-field label {
-    font-size: 3vh;
-    color: #607d8a;
+.line-size {
+    width: 88vw;
+    margin-left: 6vw;
 }
 
-.location-field input {
-	height: 3vh;
+.line-size input {
+    height: 3vh;
+    border-bottom: 1px solid #dddddd;
+
 }
 
 .row {
     margin-bottom: 0vh;
-	margin-top: 5vh;
+	margin-top: 6vh;
 }
 
-.inline input {
-    margin-bottom: 0rem;
-    font-size: 3vh;
+.btn {
+    width: 76vw;
+    height: 7vh;
+    background-color: #b2dfdb;
+    border-radius: 30px;
+    margin-top: 9vh;
+    margin-left: 12vw;
+    line-height: 7vh;
+    box-shadow: 0 0 0 0;
 }
 
-.route-field {
-    margin-top: 3vh;
-    background: white;
-    height: 10vh;
-}
-
-.route-field td, th {
-	padding: 0vh;	
-}
-
-.button-field {
-    height: 9vh;
-}
-
-.button-field a {
-    background: #fafafa;
-    color: #607d8a;
-    border-color: #979797;
-}
-
-.button-field a:hover {
-    background: black;
-    color: white;
+.btn:hover {
+    box-shadow: 0 0 0 0;
 }

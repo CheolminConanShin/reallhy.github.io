@@ -4,47 +4,33 @@
     <link type="text/css" rel="stylesheet" href="lib/materialize/css/materialize.min.css" media="screen,projection"/>
     <link rel="stylesheet" href="css/index.css">
 
-
     <script src="lib/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="lib/materialize/js/materialize.min.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
-<body>
-    <nav>
-        <div class="nav-wrapper valign-wrapper">
-            <a href="#" class="brand-logo left">WayKnower</a>
-        </div>
-    </nav>
-    <div class="location-field">
-    <div class="row">
-            <div class="col s12 valign-wrapper">
-                <label class="col s2">출발</label>
-                <div class="inline col s10">
-                    <input id="departure" type="email" class="validate">
-                </div>
-            </div>
-    </div>
-    <div class="row">
-        <div class="col s12 valign-wrapper"">
-            <label class="col s2">도착</label>
-            <div class="inline col s10">
-                <input id="destination" type="email" class="validate">
-            </div>
+<body style='font-family: "Droid Sans"'>
+    <div class="app-title">
+        <div class="row center-align">
+            <label>WayKnower</label>
         </div>
     </div>
+    <div class="row">
+        <div class="line-size">
+            <input placeholder="출발지">
+        </div>
     </div>
-     <table class="route-field centered">
-        <tbody>
-            <tr>
-                <td class="button-field">
-                <a id="searchRoute" href="html/route_select.html" class="btn" id="route">경로 검색</a>
-                </td>
-            </tr>
-        </tbody>
-     </table>
+    <div class="row">
+        <div class="line-size">
+            <input placeholder="도착지">
+        </div>
+    </div>
+    <div class="row">
+        <a class="waves-effect waves-light btn" href="html/route_select.html" style='font-size: 3vh'>
+            <div>경로 검색</div>
+        </a>
+    </div>
 </body>
 </html>
 
 
-        
