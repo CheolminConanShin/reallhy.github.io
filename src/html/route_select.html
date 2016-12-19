@@ -41,22 +41,17 @@
             <tr>
                 <td class="button-field route-tab">
                     <ul class="tabs tabs-transparent route-tab">
-                        <li class="tab route-tab"><a class="active" href="#recommended">최적</a></li>
-                        <li class="tab route-tab"><a href="#shortest">최단</a></li>
-                        <li class="tab route-tab"><a href="#free">무료</a></li>
+                        <li class="tab route-tab"><a id="recommendedRouteBtn" class="active" onclick="recommendedRoute()">최적</a>/li>
+                        <li class="tab route-tab"><a id="shortestRouteBtn" onclick="shortestRoute()">최단</a>/li>
+                        <li class="tab route-tab"><a id="freeRouteBtn" onclick="freeRoute()">무료</a>/li>
                     </ul>
-                    <!-- <a id="recommendedRouteBtn" class="waves-effect waves-light btn" onclick="recommendedRoute()">최적</a>
-                    <a id="shortestRouteBtn" class="waves-effect waves-light btn" onclick="shortestRoute()">최단</a>
-                    <a id="freeRouteBtn"  class="waves-effect waves-light btn" onclick="freeRoute()">무료</a> -->
                 </td>
             </tr>
             <tr>
                 <td class="map-field">
                     <div id="map_div" class="ollehmap ollehmap-event" data-id="ollehmap1481594207993" style="cursor: default;"></div>
+                    <div class="go-this-way-button">이 길로 가주세요</div>
                 </td>
-            </tr>
-            <tr>
-                <td class="go-this-way-button">이 길로 가주세요</td>
             </tr>
         </tbody>
     </table>
