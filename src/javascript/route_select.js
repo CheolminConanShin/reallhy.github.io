@@ -1,6 +1,6 @@
 var map, directionsService;
 var priorityType;
-
+var departureLongitude, departureLatitude, destinationLatitude, destinationLongitude;
 var getParameterByName = function(name, url) {
     if (!url) {
       url = window.location.href;
@@ -20,28 +20,22 @@ var documentReady = function() {
 	document.querySelector('#departure').innerHTML = departure;
 	document.querySelector('#destination').innerHTML = destination;
 
-	let departureLongitude = getParameterByName('depLng');
-	let departureLatitude = getParameterByName('depLat');
-	let destinationLongitude = getParameterByName('desLng');
-	let destinationLatitude = getParameterByName('desLat');
+	departureLongitude = getParameterByName('depLng');
+	departureLatitude = getParameterByName('depLat');
+	destinationLongitude = getParameterByName('desLng');
+	destinationLatitude = getParameterByName('desLat');
 	directionsService = new olleh.maps.DirectionsService('frKMcOKXS*l9iO5g');
-	// let geolocation_callback = function(position) {
-		map = new olleh.maps.Map('map_div', {
-			center : new olleh.maps.LatLng(departureLatitude, departureLongitude),
-			zoom : 7,
-			zoomControl: true,
-			copyrightControl: false,
-			mapTypeControl: false,
-			measureControl: false,
-			scaleControl: false,
-			panControl: false,
-		});
-		// sds : 37.516580, 127.100821
-		// 수원 : 37.278013, 127.034959
-		// origin : new olleh.maps.UTMK(960487, 1955309.75), 
-		// destination : new olleh.maps.UTMK(960804.5, 1956454), 
-	// }
-	// navigator.geolocation.getCurrentPosition(geolocation_callback, null, null);
+    map = new olleh.maps.Map('map_div', {
+        center : new olleh.maps.LatLng(departureLatitude, departureLongitude),
+        zoom : 7,
+        zoomControl: true,
+        copyrightControl: false,
+        mapTypeControl: false,
+        measureControl: false,
+        scaleControl: false,
+        panControl: false,
+    });
+    recommendedRoute();
 }
 
 var clearMap = function() {
@@ -54,8 +48,8 @@ var clearMap = function() {
 var recommendedRoute = function() {
 	clearMap();
 	directionsService.route({
-		origin : new olleh.maps.UTMK.valueOf(new olleh.maps.LatLng(37.516580, 127.100821)),
-		destination : new olleh.maps.UTMK.valueOf(new olleh.maps.LatLng(37.278013, 127.034959)),
+		origin : new olleh.maps.UTMK.valueOf(new olleh.maps.LatLng(departureLatitude, departureLongitude)),
+		destination : new olleh.maps.UTMK.valueOf(new olleh.maps.LatLng(destinationLatitude, destinationLongitude)),
 		projection : olleh.maps.DirectionsProjection.UTM_K, 
 		travelMode : olleh.maps.DirectionsTravelMode.DRIVING,
 		priority : olleh.maps.DirectionsDrivePriority.PRIORITY_0
@@ -66,8 +60,8 @@ var recommendedRoute = function() {
 var shortestRoute = function() {
 	clearMap();
 	directionsService.route({
-		origin : new olleh.maps.UTMK.valueOf(new olleh.maps.LatLng(37.516580, 127.100821)),
-		destination : new olleh.maps.UTMK.valueOf(new olleh.maps.LatLng(37.278013, 127.034959)),
+		origin : new olleh.maps.UTMK.valueOf(new olleh.maps.LatLng(departureLatitude, departureLongitude)),
+		destination : new olleh.maps.UTMK.valueOf(new olleh.maps.LatLng(destinationLatitude, destinationLongitude)),
 		projection : olleh.maps.DirectionsProjection.UTM_K, 
 		travelMode : olleh.maps.DirectionsTravelMode.DRIVING,
 		priority : olleh.maps.DirectionsDrivePriority.PRIORITY_1
@@ -78,8 +72,8 @@ var shortestRoute = function() {
 var freeRoute = function() {
 	clearMap();
 	directionsService.route({
-		origin : new olleh.maps.UTMK.valueOf(new olleh.maps.LatLng(37.516580, 127.100821)),
-		destination : new olleh.maps.UTMK.valueOf(new olleh.maps.LatLng(37.278013, 127.034959)),
+		origin : new olleh.maps.UTMK.valueOf(new olleh.maps.LatLng(departureLatitude, departureLongitude)),
+		destination : new olleh.maps.UTMK.valueOf(new olleh.maps.LatLng(destinationLatitude, destinationLongitude)),
 		projection : olleh.maps.DirectionsProjection.UTM_K, 
 		travelMode : olleh.maps.DirectionsTravelMode.DRIVING,
 		priority : olleh.maps.DirectionsDrivePriority.PRIORITY_2
