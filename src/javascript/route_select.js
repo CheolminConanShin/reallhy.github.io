@@ -43,6 +43,7 @@ var clearMap = function() {
 	for (var polyline of polylines) {
 		polyline.remove();
 	}
+	map.getLayer("Vector")._vectors = [];
 }
 
 var recommendedRoute = function() {
