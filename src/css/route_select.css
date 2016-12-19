@@ -1,8 +1,19 @@
-@import url('https://fonts.googleapis.com/css?family=Droid+Sans');
+@font-face {
+  font-family: droidsans;
+  src: url(../lib/fonts/DroidSans.ttf);
+}
+
+body { 
+    min-height: 20px;
+    height:auto;
+    overflow: auto;
+    font-family: droidsans;
+}
 
 nav, .nav-wrapper {
 	height: 9vh;
-	background-color: #607d8b;
+	background-color: #4db6ac;
+    box-shadow: 0 0 0 0;
 }
 
 nav .brand-logo {
@@ -13,8 +24,13 @@ nav .brand-logo {
 	height: 11vh;
 }
 .location-field label {
-    font-size: 3vh;
-    color: #607d8a;
+    font-size: 2.5vh;
+    color: #000000;
+}
+
+.location-field img {
+    width: 40px;
+    height: 40px;
 }
 
 .location-field input {
@@ -23,7 +39,11 @@ nav .brand-logo {
 
 .row {
     margin-bottom: 0vh;
-	margin-top: 2vh;
+    height: 6vh;
+}
+
+.row .col {
+    padding-left: 0px;
 }
 
 .inline input {
@@ -32,7 +52,6 @@ nav .brand-logo {
 }
 
 .route-field {
-    margin-top: 3vh;
     background: #f2f2f2;
     height: 75vh;
 }
@@ -46,13 +65,23 @@ nav .brand-logo {
 }
 
 .button-field a {
-    background: #607d8b;
-    color: white;
+    background: #e0f2f1;
+    color: #80cbc4 !important;
 }
 
-.button-field a:hover {
-    background: #607d8b;
-    color: white;
+.route-tab {
+    height: 5vh !important;
+    line-height: 5vh !important;
+}
+
+.tab a.active {
+    background: #e0f2f1 !important;
+    color: #009688 !important;
+}
+
+.indicator {
+    background: #4db6ac !important;
+    height: 0.6vh !important;
 }
 
 .map-field, #map_div {

@@ -23,30 +23,31 @@
         </div>
     </nav>
     <div class="location-field">
-    <div class="row">
+        <div class="row">
             <div class="col s12 valign-wrapper">
-                <label class="col s2">출발</label>
-                <div class="inline col s10">
-                    <input id="departure" type="email" class="validate">
-                </div>
-            </div>
-    </div>
-    <div class="row">
-        <div class="col s12 valign-wrapper"">
-            <label class="col s2">도착</label>
-            <div class="inline col s10">
-                <input id="destination" type="email" class="validate">
+                <img src="../lib/images/start.png">
+                <label id="departure">
             </div>
         </div>
-    </div>
+        <div class="row">
+            <div class="col s12 valign-wrapper"">
+                <img src="../lib/images/pin.png">
+                <label id="destination">
+            </div>
+        </div>
     </div>
     <table class="route-field centered">
         <tbody>
             <tr>
-                <td class="button-field">
-                    <a id="recommendedRouteBtn" class="waves-effect waves-light btn" onclick="recommendedRoute()">최적</a>
+                <td class="button-field route-tab">
+                    <ul class="tabs tabs-transparent route-tab">
+                        <li class="tab route-tab"><a class="active" href="#recommended">최적</a></li>
+                        <li class="tab route-tab"><a href="#shortest">최단</a></li>
+                        <li class="tab route-tab"><a href="#free">무료</a></li>
+                    </ul>
+                    <!-- <a id="recommendedRouteBtn" class="waves-effect waves-light btn" onclick="recommendedRoute()">최적</a>
                     <a id="shortestRouteBtn" class="waves-effect waves-light btn" onclick="shortestRoute()">최단</a>
-                    <a id="freeRouteBtn"  class="waves-effect waves-light btn" onclick="freeRoute()">무료</a>
+                    <a id="freeRouteBtn"  class="waves-effect waves-light btn" onclick="freeRoute()">무료</a> -->
                 </td>
             </tr>
             <tr>

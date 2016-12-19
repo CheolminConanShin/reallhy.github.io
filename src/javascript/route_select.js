@@ -1,7 +1,25 @@
 var map, directionsService;
 var priorityType;
+
+var getParameterByName = function(name, url) {
+    if (!url) {
+      url = window.location.href;
+    }
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
 // 초기화 함수
 var documentReady = function() {
+	let departure = getParameterByName('departure');
+	let destination = getParameterByName('destination');
+	document.querySelector('#departure').innerHTML = departure;
+	document.querySelector('#destination').innerHTML = destination;
+
 	directionsService = new olleh.maps.DirectionsService('frKMcOKXS*l9iO5g');
 	let geolocation_callback = function(position) {
 		map = new olleh.maps.Map('map_div', {
