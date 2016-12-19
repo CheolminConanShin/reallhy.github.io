@@ -20,10 +20,14 @@ var documentReady = function() {
 	document.querySelector('#departure').innerHTML = departure;
 	document.querySelector('#destination').innerHTML = destination;
 
+	let departureLongitude = getParameterByName('depLng');
+	let departureLatitude = getParameterByName('depLat');
+	let destinationLongitude = getParameterByName('desLng');
+	let destinationLatitude = getParameterByName('desLat');
 	directionsService = new olleh.maps.DirectionsService('frKMcOKXS*l9iO5g');
-	let geolocation_callback = function(position) {
+	// let geolocation_callback = function(position) {
 		map = new olleh.maps.Map('map_div', {
-			center : new olleh.maps.LatLng(position.coords.latitude, position.coords.longitude),
+			center : new olleh.maps.LatLng(departureLatitude, departureLongitude),
 			zoom : 7,
 			zoomControl: true,
 			copyrightControl: false,
@@ -36,8 +40,8 @@ var documentReady = function() {
 		// 수원 : 37.278013, 127.034959
 		// origin : new olleh.maps.UTMK(960487, 1955309.75), 
 		// destination : new olleh.maps.UTMK(960804.5, 1956454), 
-	}
-	navigator.geolocation.getCurrentPosition(geolocation_callback, null, null);
+	// }
+	// navigator.geolocation.getCurrentPosition(geolocation_callback, null, null);
 }
 
 var clearMap = function() {
