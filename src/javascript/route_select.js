@@ -37,6 +37,11 @@ var documentReady = function() {
         disablePinchZoom: false,
         disableMultiTabZoom: false
     });
+
+    map.onEvent("pinch", function(event, payload, scale) { 
+    	console.log(scale);
+    });
+    
     recommendedRoute();
 }
 
