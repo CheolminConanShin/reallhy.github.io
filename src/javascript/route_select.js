@@ -25,6 +25,8 @@ var documentReady = function() {
 	destinationLongitude = getParameterByName('desLng');
 	destinationLatitude = getParameterByName('desLat');
 	directionsService = new olleh.maps.DirectionsService('frKMcOKXS*l9iO5g');
+    var control = olleh.maps.control.Control;
+
     map = new olleh.maps.Map('map_div', {
         center : new olleh.maps.LatLng(departureLatitude, departureLongitude),
         zoom : 7,
@@ -35,7 +37,14 @@ var documentReady = function() {
         scaleControl: false,
         panControl: false,
         disablePinchZoom: false,
-        disableMultiTabZoom: false
+        disableMultiTabZoom: false,
+        zoomControlOptions: {
+		    position: control.TOP_RIGHT, 
+		    direction: control.VERTICAL,
+		    top: 130,
+		    right: 20,
+		    style: olleh.maps.control.ZoomControl.SMALL
+  		}
     });
 
     recommendedRoute();
