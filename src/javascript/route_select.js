@@ -28,7 +28,7 @@ var documentReady = function() {
     map = new olleh.maps.Map('map_div', {
         center : new olleh.maps.LatLng(departureLatitude, departureLongitude),
         zoom : 7,
-        zoomControl: false,
+        zoomControl: true,
         copyrightControl: false,
         mapTypeControl: false,
         measureControl: false,
