@@ -1,4 +1,4 @@
-const SHORTEST_PATH_COLOR = "green";
+ const SHORTEST_PATH_COLOR = "green";
 const HIGHWAY_PATH_COLOR = "blue";
 const FREEWAY_PATH_COLOR = "orange";
 const TRAFFIC_PATH_COLOR = "purple";
