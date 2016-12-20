@@ -22,8 +22,6 @@
 		// 초기화 함수
 		function init() {
 			let geolocation_callback = function(position) {
-				console.log(position.coords);
-
 				map = new olleh.maps.Map('map_div', {
 					center : new olleh.maps.LatLng(position.coords.latitude, position.coords.longitude),
 					zoom : 7

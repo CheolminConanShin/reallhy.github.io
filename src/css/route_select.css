@@ -88,6 +88,16 @@ nav .brand-logo {
     height: 74vh;
 }
 
+#routeInfo {
+    height: 13vh;
+    position: fixed;
+    top: 31vh;
+    left: 4vw;
+    right: 4vw;
+    z-index: 1;
+    background-color: white;
+}
+
 .go-this-way-button {
     background: rgba(1, 175, 175, 0.7);
     color: white;
