@@ -90,7 +90,7 @@ nav .brand-logo {
 
 #routeInfo {
     height: 13vh;
-    position: fixed;
+    position: absolute;
     top: 31vh;
     left: 4vw;
     right: 4vw;
@@ -103,7 +103,7 @@ nav .brand-logo {
     color: white;
     height: 6vh;
     line-height: 6vh;
-    position: fixed;
+    position: absolute;
     bottom: 4vh;
     left: 4vw;
     right: 4vw;

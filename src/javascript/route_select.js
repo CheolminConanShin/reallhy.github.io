@@ -39,9 +39,9 @@ var documentReady = function() {
     });
 
     map.onEvent("pinch", function(event, payload, scale) { 
-    	console.log(scale);
+    	alert(scale);
     });
-    
+
     recommendedRoute();
 }
 
