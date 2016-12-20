@@ -34,6 +34,8 @@ var documentReady = function() {
         measureControl: false,
         scaleControl: false,
         panControl: false,
+        disablePinchZoom: false,
+        disableMultiTabZoom: false
     });
     recommendedRoute();
 }
