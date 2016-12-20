@@ -38,10 +38,6 @@ var documentReady = function() {
         disableMultiTabZoom: false
     });
 
-    map.onEvent("pinch", function(event, payload, scale) { 
-    	alert(scale);
-    });
-
     recommendedRoute();
 }
 
